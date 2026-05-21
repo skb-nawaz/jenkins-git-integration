@@ -6,6 +6,8 @@ test("Practice Test 1", async ({ page }) => {
   console.log(await page.title());
   expect(page).toHaveTitle("Google");
   console.log("Ending Practice Test 1");
+
+  //this is new line added
 });
 
 test("Practice Test 2", async ({ page }) => {
