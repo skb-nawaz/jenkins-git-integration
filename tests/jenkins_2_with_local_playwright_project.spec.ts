@@ -6,7 +6,6 @@ test("Practice Test 4 @UAT", async ({ page }) => {
   console.log(await page.title());
   expect(page).toHaveTitle("Google");
   console.log("Ending Practice Test 4");
-  console.log("weebhooks are added");
 });
 
 test("Practice Test 5 @DEV", async ({ page }) => {
