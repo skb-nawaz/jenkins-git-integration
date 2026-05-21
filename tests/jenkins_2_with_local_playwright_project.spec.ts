@@ -6,7 +6,6 @@ test("Practice Test 4 @UAT", async ({ page }) => {
   console.log(await page.title());
   expect(page).toHaveTitle("Google");
   console.log("Ending Practice Test 4");
-  //this line is added for testing purpose
 });
 
 test("Practice Test 5 @DEV", async ({ page }) => {
@@ -24,4 +23,5 @@ test("Practice Test 6 @SIT", async ({ page }) => {
   console.log(await page.title());
   expect(page).toHaveTitle("Google");
   console.log("Ending Practice Test 6");
+  //jenkins integration is successfull
 });
