@@ -1,4 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
+import dotenv from 'dotenv'
+import path from "path"
+
 
 /**
  * Read environment variables from file.
@@ -6,15 +9,21 @@ import { defineConfig, devices } from "@playwright/test";
  */
 // import dotenv from 'dotenv';
 // import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+ dotenv.config({ path: path.resolve('env', '.env') });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+//dotenv.config({ path: "./env/.env" })
 export default defineConfig({
+  use: {
+    headless: false,
+    slowMo: 1000,
+  },
   testMatch: [
-    "tests/jenkins_1_with_local_playwright_project.spec.ts",
-    "tests/jenkins_2_with_local_playwright_project.spec.ts",
+    /*   "tests/jenkins_1_with_local_playwright_project.spec.ts",
+    "tests/jenkins_2_with_local_playwright_project.spec.ts", */
+    "tests/encrypt_decrypt_data.spec.ts",
   ],
   testDir: "tests/",
   /* Run tests in files in parallel */
