@@ -91,7 +91,7 @@ test.only("Store encrypted data in env file", async ({ page }) => {
 });
 
 //store credentials in json file
-test.only("Store encrypted data in json file", async ({ page }) => {
+test("Store encrypted data in json file", async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
 
   const secretKey = securedata.SECRET_KEY ? securedata.SECRET_KEY : "";
