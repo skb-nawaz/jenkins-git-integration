@@ -6,7 +6,7 @@ import securedata from "../testdata/securedata.json";
 
 // test("encrypted data", async ({ page }) => {});
 
-test.only("Encrypt Decrypt Sensitive Data in Playwright", async ({ page }) => {
+test("Encrypt Decrypt Sensitive Data in Playwright", async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
   dotenv.config({ path: "./env/.env" });
   const secretKey = process.env.SECRET_KEY ? process.env.SECRET_KEY : "";
@@ -73,7 +73,7 @@ test("Using utilities file Encrypt Decrypt Sensitive Data in Playwright", async 
 }); */
 
 //store credentials in env
-test.only("Store encrypted data in env file", async ({ page }) => {
+test("Store encrypted data in env file", async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
 
   const secretKey = process.env.SECRET_KEY ? process.env.SECRET_KEY : "";
